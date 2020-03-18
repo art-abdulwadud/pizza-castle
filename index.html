@@ -17,16 +17,50 @@
     </head>
     <body>
         <section class="intro">
-            <div class="text-area m-3">
-                <h1 class="heading orange">Pizza Castle</h1>
+            <div class="text-area intro-text m-3">
+                <img src="img/logo.png" alt="logo" class="img-fluid logo" />
+                <h1 class="heading yellowish">Pizza Castle</h1>
                 <p class="small-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolor iusto cum, doloremque ratione
                     dignissimos. Expedita temporibus magni libero itaque praesentium sequi cupiditate vero explicabo
                     quisquam, nemo repudiandae doloremque, laboriosam.
                 </p>
-                <button class="p-btn small-text mb-2">Order Pizza</button>
+
+                <button class="p-btn small-text mb-2" id="move-to-order">Order Pizza</button>
             </div>
-            <div class="intro-overlay"></div>
+            <div class="overlay"></div>
+        </section>
+        <section class="order">
+            <div class="text-area pt-3">
+                <form id="order-form">
+                    <div class="options">
+                        <h1 class="heading pink">Choose Size</h1>
+                        <select name="size" id="size" class="ml-2 selector small-text">
+                            <option value="1000">Large Pizza</option>
+                            <option value="700">Medium Pizza</option>
+                            <option value="500">Small Pizza</option>
+                        </select>
+                    </div>
+                    <div class="options">
+                        <h1 class="heading pink">Choose Crust</h1>
+                        <select name="crust" id="crust" class="ml-2 selector small-text">
+                            <option value="300">Thick crust</option>
+                            <option value="200">Deep crust</option>
+                            <option value="100">Thin crust</option>
+                        </select>
+                    </div>
+                    <div class="options">
+                        <h1 class="heading pink">Choose Crust</h1>
+                        <select name="toppings" id="toppings" class="ml-2 selector small-text">
+                            <option value="70">Pepperoni</option>
+                            <option value="100">Mashrooms</option>
+                            <option value="40">Onions</option>
+                            <option value="90">Extra cheese</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="overlay"></div>
         </section>
 
         <!-- Optional JavaScript -->
@@ -35,6 +69,7 @@
             AOS.init();
         </script>
         <script src="pizza-object.js"></script>
+        <script src="section-handler.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="jquery/jquery-3.3.1.slim.min.js"></script>
         <script src="popper/popper.min.js"></script>

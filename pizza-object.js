@@ -7,49 +7,33 @@ class Pizza {
 		this.toppings = toppings;
 	}
 
-	getSizePrize() {
-		this.size = prompt('Enter size');
-		this.size === 'large'
-			? (sizePrice = 1000)
-			: this.size === 'medium'
-			? (sizePrice = 700)
-			: this.size === 'small'
-			? (sizePrice = 500)
-			: (sizePrice = 0);
-		return `${this.size} pizza is Ksh. ${sizePrice}`;
+	getSizePrice() {
+		const selectedOpt = sizeSelector.options[sizeSelector.selectedIndex];
+		this.size = selectedOpt.text;
+		sizePrice = selectedOpt.value;
+		sizeInfo.innerText = `${this.size} is Ksh. ${sizePrice}`;
 	}
 	getCrustPrice() {
-		this.crust = prompt('Enter Crust');
-		this.crust === 'thick crust'
-			? (crustPrice = 300)
-			: this.crust === 'deep crust'
-			? (crustPrice = 200)
-			: this.crust === 'thin crust'
-			? (crustPrice = 100)
-			: (crustPrice = 0);
-		return crustPrice;
+		const selectedOpt = crustSelector.options[crustSelector.selectedIndex];
+		this.crust = selectedOpt.text;
+		crustPrice = selectedOpt.value;
+		crustInfo.innerText = `${this.crust} is Ksh. ${sizePrice}`;
 	}
 	getToppingsPrice() {
-		this.toppings = prompt('Enter toppings');
-		this.toppings === 'pepperoni'
-			? (toppingsPrice = 70)
-			: this.toppings === 'mashrooms'
-			? (toppingsPrice = 100)
-			: this.toppings === 'onions'
-			? (toppingsPrice = 40)
-			: this.toppings === 'extra cheese'
-			? (toppingsPrice = 90)
-			: (toppingsPrice = 0);
-		return toppingsPrice;
+		const selectedOpt = toppingsSelector.options[toppingsSelector.selectedIndex];
+		this.toppings = selectedOpt.text;
+		toppingsPrice = selectedOpt.value;
+		toppingsInfo.innerText = `${this.toppings} is Ksh. ${toppingsPrice}`;
 	}
 	getTotal() {
-		return sizePrice + crustPrice + toppingsPrice;
+		totalInfo.innerText = parseInt(sizePrice) + parseInt(crustPrice) + parseInt(toppingsPrice);
 	}
 }
 
 const pizza = new Pizza();
 /*
-pizza.getSizePrize();
+pizza.getSizePrice();
+
 pizza.getCrustPrice();
 pizza.getToppingsPrice();
 pizza.getTotal();

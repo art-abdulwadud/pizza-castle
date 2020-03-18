@@ -16,7 +16,7 @@ class Pizza {
 			: this.size === 'small'
 			? (sizePrice = 500)
 			: (sizePrice = 0);
-		return sizePrice;
+		return `${this.size} pizza is Ksh. ${sizePrice}`;
 	}
 	getCrustPrice() {
 		this.crust = prompt('Enter Crust');
@@ -42,6 +42,15 @@ class Pizza {
 			: (toppingsPrice = 0);
 		return toppingsPrice;
 	}
+	getTotal() {
+		return sizePrice + crustPrice + toppingsPrice;
+	}
 }
 
 const pizza = new Pizza();
+/*
+pizza.getSizePrize();
+pizza.getCrustPrice();
+pizza.getToppingsPrice();
+pizza.getTotal();
+*/

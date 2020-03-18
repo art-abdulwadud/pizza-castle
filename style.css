@@ -1,15 +1,62 @@
 body{
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
-/** Images section **/
+/** Common Classes **/
 .heading{
 	font-family: 'Righteous', cursive;
 	font-style: italic;
-	text-align: center;
+	font-size: calc(100% + 30px);
 }
 .small-text{
 	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: calc(100% + 10px);
+}
+.orange{
+	color: #f6d365 !important;
+}
+.pink{
+	color: #fda085 !important
+}
+.p-btn{
+	border: 1px solid #f6d365;
+	background: rgba(0,0,0,0.5);
+	color: #f6d365;
+	padding: 5px;
+	transition: 0.6s;
+}
+.p-btn:hover{
+	border: 1px solid #f6d365;
+	background: #f6d365;
+	color: black;
+}
+/*** Intro Section ***/
+.intro{
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	background-image: url(img/bg5.jpg);
+	background-size: cover;
+	z-index: 1;
+}
+.text-area{
+	height: 100%;
+	position: absolute;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	z-index: 3;
+}
+.intro-overlay{
+	height: 100%;
+	position: relative;
+	background: rgba(0,0,0,0.8);
+	z-index: 2;
 }
 /*
   ##Device = Desktops

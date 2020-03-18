@@ -1,18 +1,24 @@
+html, body{
+	scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
+section{
+	position: relative;
+	width: 100%;
+	background-size: cover;
+	z-index: 1;
+}
 /*** Intro Section ***/
 .intro{
 	height: 100vh;
 	overflow: hidden;
-	width: 100%;
-	position: relative;
 	background-image: url(img/bg1.jpg);
-	background-size: cover;
-	z-index: 1;
+	background-attachment: fixed;
 }
 .logo{
 	height: auto;
@@ -22,21 +28,28 @@ body{
 .order{
 	height: auto;
 	min-height: 100vh;
-	width: 100%;
-	position: relative;
-	background-image: url(img/bg1.jpg);
-	background-size: cover;
-	z-index: 1;
+	background-image: url(img/bg2.jpg);
+	background-attachment: fixed;
 }
 /*** Complete order section ***/
 .complete-order{
 	height: auto;
 	min-height: 100vh;
-	width: 100%;
-	position: relative;
+	background-image: url(img/bg3.jpg);
+	background-attachment: fixed;
+}
+/*** Complete order section ***/
+.delivery{
+	height: auto;
+	min-height: 100vh;
+	background-image: url(img/bg4.jpg);
+	background-attachment: fixed;
+}
+.completed{
+	height: auto;
+	min-height: 100vh;
 	background-image: url(img/bg1.jpg);
-	background-size: cover;
-	z-index: 1;
+	background-attachment: fixed;
 }
 /** Common Classes **/
 .heading{

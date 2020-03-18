@@ -8,3 +8,5 @@ const totalInfo = document.querySelector('#total-info');
 const checkTotal = document.querySelector('#check-total');
 const order = document.querySelector('#order');
 const options = document.querySelectorAll('.options');
+const delivered = document.querySelector('.delivered');
+const deliver = document.querySelector('#deliver');

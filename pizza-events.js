@@ -58,12 +58,16 @@ order.addEventListener('click', e => {
 deliver.addEventListener('click', e => {
 	e.preventDefault();
 	const myLocation = document.querySelector('#location').value;
-	delivered.innerText = `Your pizza will be delivered to 
-	${myLocation.replace(/^\w/, c => c.toUpperCase())} in 20 mins`;
-	completed.style.display = 'block';
-	completed.setAttribute('id', 'active-sec');
-	delivery.setAttribute('id', 'inactive-sec');
-	scrollTo(0, completed.offsetTop);
+	if (myLocation !== '') {
+		delivered.innerText = `Your pizza will be delivered to 
+		${myLocation.replace(/^\w/, c => c.toUpperCase())} in 20 mins`;
+		completed.style.display = 'block';
+		completed.setAttribute('id', 'active-sec');
+		delivery.setAttribute('id', 'inactive-sec');
+		scrollTo(0, completed.offsetTop);
+	} else {
+		error.innerText = 'Please enter your location first';
+	}
 });
 newOrder.forEach(order => {
 	order.addEventListener('click', e => {

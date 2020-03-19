@@ -16,6 +16,7 @@ const totalInfo = document.querySelector('#total-info');
 const options = document.querySelectorAll('.options');
 const delivered = document.querySelector('.delivered');
 const loading = document.querySelectorAll('#loading');
+const error = document.querySelector('#error');
 // Buttons
 const moveToOrder = document.querySelector('#move-to-order');
 const checkTotal = document.querySelector('#check-total');

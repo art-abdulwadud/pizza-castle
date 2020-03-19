@@ -5,10 +5,11 @@ const completeOrder = document.querySelector('.complete-order');
 const delivery = document.querySelector('.delivery');
 const completed = document.querySelector('.completed');
 const active = document.querySelector('#active-sec');
-// Text tags
+// Selectors
 const sizeSelector = document.querySelector('#size');
 const crustSelector = document.querySelector('#crust');
 const toppingsSelector = document.querySelector('#toppings');
+// Text tags
 const sizeInfo = document.querySelector('#size-info');
 const crustInfo = document.querySelector('#crust-info');
 const toppingsInfo = document.querySelector('#toppings-info');

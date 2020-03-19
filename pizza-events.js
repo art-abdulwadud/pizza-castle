@@ -48,6 +48,7 @@ order.addEventListener('click', e => {
 	setTimeout(() => {
 		delivery.setAttribute('id', 'active-sec');
 		completeOrder.setAttribute('id', 'inactive-sec');
+		orderSection.setAttribute('id', 'inactive-sec');
 		scrollTo(0, delivery.offsetTop);
 		loading.forEach(load => {
 			load.style.display = 'none';

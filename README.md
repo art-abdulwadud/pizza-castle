@@ -55,9 +55,85 @@ For our HTML
 </select>
 ```
 
-We used the `value` attrivute of the `select` tag to store the price of each.
+We used the `value` attrivute of the `option` tag to store the price of each item and the `innerText` of the `option` tag to store the name of each item.
 Now, to store the prices of of each size of pizza(i.e large, medium, small), each crust(i.e thick crust, deep crust, thin crust) and each toppings(i.e pepperoni, mashrooms, onions, extra cheese), we going to create global variables.
 
 ```
 let sizePrice, crustPrice, toppingsPrice
+```
+
+We want to get the item names and item prices selected by our users.
+HTML for displaying the selected items and the total
+
+```
+ <p class="small-text yellowish" id="size-info"></p>
+ <p class="small-text yellowish" id="crust-info"></p>
+ <p class="small-text yellowish" id="toppings-info"></p>
+ <span class="small-text yellowish">Total: Ksh
+ 	<span class="small-text yellowish" id="total-info"></span>
+ </span>
+```
+
+Create a method for getting them and storing them in the Pizza object properties we created with the constructor(i.e size, crust, toppings). We'll then create a method for calculating the total.
+
+```
+const sizeSelector = document.querySelector('#size');
+const crustSelector = document.querySelector('#crust');
+const toppingsSelector = document.querySelector('#toppings');
+
+class Pizza {
+	constructor(size, crust, toppings) {
+		this.size = size;
+		this.crust = crust;
+		this.toppings = toppings;
+	}
+
+	getSizePrice() {
+		const selectedOpt = sizeSelector.options[sizeSelector.selectedIndex];
+		this.size = selectedOpt.text;
+		sizePrice = selectedOpt.value;
+		sizeInfo.innerText = `${this.size} is Ksh. ${sizePrice}`;
+	}
+	getCrustPrice() {
+		const selectedOpt = crustSelector.options[crustSelector.selectedIndex];
+		this.crust = selectedOpt.text;
+		crustPrice = selectedOpt.value;
+		crustInfo.innerText = `${this.crust} is Ksh. ${crustPrice}`;
+	}
+	getToppingsPrice() {
+		const selectedOpt = toppingsSelector.options[toppingsSelector.selectedIndex];
+		this.toppings = selectedOpt.text;
+		toppingsPrice = selectedOpt.value;
+		toppingsInfo.innerText = `${this.toppings} is Ksh. ${toppingsPrice}`;
+	}
+	getTotal() {
+		totalInfo.innerText = parseInt(sizePrice) + parseInt(crustPrice) + parseInt(toppingsPrice);
+	}
+}
+```
+
+Finally, we are going to new up an instance of our class.
+
+```
+const pizza = new Pizza()
+```
+
+Create a button for making the order and showing the total to the user.
+
+```
+<button class="p-btn small-text mb-2" id="check-total" type="submit">Check Total</button>
+```
+
+And call our methods within an event listener.
+
+```
+const checkTotal = document.querySelector('#check-total');
+
+checkTotal.addEventListener('click', e => {
+	e.preventDefault();
+	pizza.getSizePrice();
+	pizza.getCrustPrice();
+	pizza.getToppingsPrice();
+	pizza.getTotal();
+})
 ```

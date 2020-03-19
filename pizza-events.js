@@ -65,6 +65,8 @@ deliver.addEventListener('click', e => {
 		completed.setAttribute('id', 'active-sec');
 		delivery.setAttribute('id', 'inactive-sec');
 		scrollTo(0, completed.offsetTop);
+		error.innerText = '';
+		locationForm.reset();
 	} else {
 		error.innerText = 'Please enter your location first';
 	}

@@ -24,3 +24,5 @@ const cancelOrder = document.querySelector('#cancel-order');
 const order = document.querySelector('#order');
 const deliver = document.querySelector('#deliver');
 const newOrder = document.querySelectorAll('.new-order');
+// Forms
+const locationForm = document.querySelector('#location-form');

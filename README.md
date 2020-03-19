@@ -1,6 +1,6 @@
 ## Pizza Caste
 
-A small web app for demontrating how Javascript constructors work when using ES6 syntax. It's an easy to get you started.
+A small web app for demontrating how Javascript constructors work when using ES6 syntax. It's an easy way to get you started with classes in Javascript ES6 syntax.
 
 View site https://art-abdulwadud.github.io/pizza-castle/
 

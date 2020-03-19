@@ -118,7 +118,7 @@ Finally, we are going to new up an instance of our class.
 const pizza = new Pizza()
 ```
 
-Create a button for making the order and showing the total to the user.
+Create a button for making the order and displaying all the items selected and the total to the user.
 
 ```
 <button class="p-btn small-text mb-2" id="check-total" type="submit">Check Total</button>

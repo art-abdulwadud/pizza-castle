@@ -65,6 +65,10 @@ deliver.addEventListener('click', e => {
 		completed.setAttribute('id', 'active-sec');
 		delivery.setAttribute('id', 'inactive-sec');
 		scrollTo(0, completed.offsetTop);
+		intro.style.display = 'none';
+		orderSection.style.display = 'none';
+		completeOrder.style.display = 'none';
+		delivery.style.display = 'none';
 		error.innerText = '';
 		locationForm.reset();
 	} else {
@@ -74,11 +78,13 @@ deliver.addEventListener('click', e => {
 newOrder.forEach(order => {
 	order.addEventListener('click', e => {
 		e.preventDefault();
-		intro.setAttribute('id', 'active-sec');
-		scrollTo(0, intro.offsetTop);
+
 		setTimeout(() => {
-			completeOrder.style.display = 'none';
+			intro.style.display = 'block';
+			intro.setAttribute('id', 'active-sec');
+			scrollTo(0, intro.offsetTop);
 			orderSection.style.display = 'none';
+			completeOrder.style.display = 'none';
 			delivery.style.display = 'none';
 			completed.style.display = 'none';
 		}, 1000);

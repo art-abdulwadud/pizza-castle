@@ -29,5 +29,4 @@ class Pizza {
 		totalInfo.innerText = parseInt(sizePrice) + parseInt(crustPrice) + parseInt(toppingsPrice);
 	}
 }
-
 const pizza = new Pizza();

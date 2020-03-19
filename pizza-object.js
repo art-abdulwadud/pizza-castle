@@ -31,10 +31,3 @@ class Pizza {
 }
 
 const pizza = new Pizza();
-/*
-pizza.getSizePrice();
-
-pizza.getCrustPrice();
-pizza.getToppingsPrice();
-pizza.getTotal();
-*/

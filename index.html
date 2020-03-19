@@ -16,93 +16,100 @@
         <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <section class="intro">
-            <div class="text-area center-left m-3">
-                <img src="img/logo.png" alt="logo" class="img-fluid logo" />
-                <h1 class="heading yellowish">Pizza Castle</h1>
-                <p class="small-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolor iusto cum, doloremque ratione
-                    dignissimos. Expedita temporibus magni libero itaque praesentium sequi cupiditate vero explicabo
-                    quisquam, nemo repudiandae doloremque, laboriosam.
-                </p>
+        <main>
+            <section class="intro">
+                <div class="text-area center-left m-3">
+                    <img src="img/logo.png" alt="logo" class="img-fluid logo" />
+                    <h1 class="heading yellowish" data-aos="fade-down">Pizza Castle</h1>
+                    <p class="small-text" data-aos="fade-up">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolor iusto cum, doloremque
+                        ratione dignissimos. Expedita temporibus magni libero itaque praesentium sequi cupiditate vero
+                        explicabo quisquam, nemo repudiandae doloremque, laboriosam.
+                    </p>
 
-                <button class="p-btn small-text mb-2" id="move-to-order">Order Pizza</button>
-            </div>
-            <div class="overlay"></div>
-        </section>
-        <section class="order">
-            <div class="text-area container text-center">
-                <form id="order-form">
-                    <div class="options mt-5">
-                        <h1 class="small-text yellowish">Choose Size</h1>
-                        <select name="size" id="size" class="ml-2 selector small-text">
-                            <option value="1000">Large Pizza</option>
-                            <option value="700">Medium Pizza</option>
-                            <option value="500">Small Pizza</option>
-                        </select>
-                    </div>
-                    <div class="options">
-                        <h1 class="small-text yellowish">Choose Crust</h1>
-                        <select name="crust" id="crust" class="ml-2 selector small-text">
-                            <option value="300">Thick crust</option>
-                            <option value="200">Deep crust</option>
-                            <option value="100">Thin crust</option>
-                        </select>
-                    </div>
-                    <div class="options mb-2">
-                        <h1 class="small-text yellowish">Choose Toppings</h1>
-                        <select name="toppings" id="toppings" class="ml-2 selector small-text">
-                            <option value="70">Pepperoni</option>
-                            <option value="100">Mashrooms</option>
-                            <option value="40">Onions</option>
-                            <option value="90">Extra cheese</option>
-                        </select>
-                    </div>
-                    <button class="p-btn small-text mb-2" id="check-total" type="submit">Check Total</button>
-                </form>
-            </div>
-            <div class="overlay"></div>
-        </section>
-        <section class="complete-order">
-            <div class="text-area text-center">
-                <div class="info text-center mt-5">
-                    <p class="small-text yellowish" id="size-info"></p>
-                    <p class="small-text yellowish" id="crust-info"></p>
-                    <p class="small-text yellowish" id="toppings-info"></p>
-                    <p class="small-text yellowish" id="total-info"></p>
+                    <button class="p-btn small-text mb-2" id="move-to-order">Order Pizza</button>
                 </div>
-                <button class="p-btn small-text mb-2" id="check-total" type="submit">Cancel Order</button>
-                <button class="p-btn small-text mb-2" id="order" type="submit">Order</button>
-            </div>
-            <div class="overlay"></div>
-        </section>
-        <section class="delivery">
-            <div class="text-area text-center">
-                <h1 class="heading mt-2 yellowish">Location for Delivery</h1>
-                <p class="small-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus obcaecati reprehenderit
-                </p>
-                <form>
-                    <input
-                        type="text"
-                        class="selector small-text"
-                        id="location"
-                        placeholder="Enter your location"
-                    /><br />
-                    <button class="p-btn small-text mt-2 mb-2" id="deliver" type="submit">Free Delivery</button>
-                </form>
-            </div>
-            <div class="overlay"></div>
-        </section>
-        <section class="completed">
-            <div class="text-area text-center">
-                <h1 class="heading mt-5">Order Completed</h1>
-                <p class="small-text delivered"></p>
-                <button class="p-btn small-text mt-2 mb-2" id="new-order" type="submit">New order</button>
-            </div>
-            <div class="overlay"></div>
-        </section>
-
+                <div class="overlay"></div>
+            </section>
+            <section class="order">
+                <div class="text-area container text-center">
+                    <form id="order-form">
+                        <div class="options mt-5">
+                            <h1 class="small-text yellowish">Choose Size</h1>
+                            <select name="size" id="size" class="ml-2 selector small-text">
+                                <option value="1000">Large Pizza</option>
+                                <option value="700">Medium Pizza</option>
+                                <option value="500">Small Pizza</option>
+                            </select>
+                        </div>
+                        <div class="options">
+                            <h1 class="small-text yellowish">Choose Crust</h1>
+                            <select name="crust" id="crust" class="ml-2 selector small-text">
+                                <option value="300">Thick crust</option>
+                                <option value="200">Deep crust</option>
+                                <option value="100">Thin crust</option>
+                            </select>
+                        </div>
+                        <div class="options mb-2">
+                            <h1 class="small-text yellowish">Choose Toppings</h1>
+                            <select name="toppings" id="toppings" class="ml-2 selector small-text">
+                                <option value="70">Pepperoni</option>
+                                <option value="100">Mashrooms</option>
+                                <option value="40">Onions</option>
+                                <option value="90">Extra cheese</option>
+                            </select>
+                        </div>
+                        <p class="small-text" id="loading"></p>
+                        <button class="p-btn small-text mb-2" id="check-total" type="submit">Check Total</button>
+                    </form>
+                </div>
+                <div class="overlay"></div>
+            </section>
+            <section class="complete-order">
+                <div class="text-area text-center">
+                    <div class="info text-center mt-5">
+                        <p class="small-text yellowish" id="size-info"></p>
+                        <p class="small-text yellowish" id="crust-info"></p>
+                        <p class="small-text yellowish" id="toppings-info"></p>
+                        <span class="small-text yellowish"
+                            >Total: Ksh <span class="small-text yellowish" id="total-info"></span
+                        ></span>
+                    </div>
+                    <p class="small-text" id="loading"></p>
+                    <button class="p-btn small-text mb-2" id="cancel-order" type="submit">Cancel Order</button>
+                    <button class="p-btn small-text mb-2" id="order" type="submit">Order</button>
+                </div>
+                <div class="overlay"></div>
+            </section>
+            <section class="delivery">
+                <div class="text-area text-center">
+                    <h1 class="heading mt-2 yellowish">Location for Delivery</h1>
+                    <p class="small-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus obcaecati reprehenderit
+                    </p>
+                    <form>
+                        <input
+                            type="text"
+                            class="selector small-text"
+                            id="location"
+                            placeholder="Enter your location"
+                        /><br />
+                        <button class="p-btn small-text mt-2 mb-2" id="deliver" type="submit">Free Delivery</button>
+                        <button class="p-btn small-text mt-2 mb-2 new-order" type="submit">No Thanks</button>
+                    </form>
+                </div>
+                <div class="overlay"></div>
+            </section>
+            <section class="completed">
+                <div class="text-area text-center">
+                    <h1 class="heading mt-5">Order Completed</h1>
+                    <p class="small-text delivered"></p>
+                    <button class="p-btn small-text mt-2 mb-2 new-order" type="submit">New order</button>
+                    <button class="p-btn small-text mt-2 mb-2 new-order" type="submit">Done</button>
+                </div>
+                <div class="overlay"></div>
+            </section>
+        </main>
         <!-- Optional JavaScript -->
         <script src="js/aos.js"></script>
         <script>

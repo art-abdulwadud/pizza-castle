@@ -17,7 +17,7 @@ class Pizza {
 		const selectedOpt = crustSelector.options[crustSelector.selectedIndex];
 		this.crust = selectedOpt.text;
 		crustPrice = selectedOpt.value;
-		crustInfo.innerText = `${this.crust} is Ksh. ${sizePrice}`;
+		crustInfo.innerText = `${this.crust} is Ksh. ${crustPrice}`;
 	}
 	getToppingsPrice() {
 		const selectedOpt = toppingsSelector.options[toppingsSelector.selectedIndex];

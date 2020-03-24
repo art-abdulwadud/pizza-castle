@@ -2,7 +2,7 @@
 
 A small web app for demontrating how Javascript constructors work when using ES6 syntax. It's an easy way to get you started with classes in Javascript ES6 syntax.
 
-View site https://art-abdulwadud.github.io/pizza-castle/
+[View site](https://art-abdulwadud.github.io/pizza-castle/)
 
 First, we create the class
 
